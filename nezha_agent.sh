@@ -44,7 +44,7 @@ fi
       "nezha_pwd": "$nezha_pwd",
       "tls": "$tls"
     }
-    EOF
+  EOF
 
   input="y"
   if [[ -e "$config" ]]; then
