@@ -13,7 +13,7 @@ KEY=$3
 # 检测系统架构并选择下载链接
 ARCH=$(uname -m)
 case $ARCH in
-    x86_64)
+    x86_64|amd64)  # 兼容 x86_64 和 amd64
         AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_amd64.zip"
         ;;
     aarch64)
