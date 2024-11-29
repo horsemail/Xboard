@@ -10,18 +10,8 @@ DOMAIN=$1
 PORT=$2
 KEY=$3
 
-# 检测系统架构并选择下载链接
-ARCH=$(uname -m)
-if [[ "$ARCH" == "x86_64" || "$ARCH" == "amd64" ]]; then
-    AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_amd64.zip"
-elif [[ "$ARCH" == "aarch64" ]]; then
-    AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_arm64.zip"
-elif [[ "$ARCH" == "armv7l" ]]; then
-    AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_arm.zip"
-else
-    echo "不支持的系统架构: $ARCH"
-    exit 1
-fi
+# 下载链接
+AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_freebsd_amd64.zip
 
 # 创建安装目录
 INSTALL_DIR=$(pwd)/nezha
