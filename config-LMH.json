@@ -1,0 +1,85 @@
+{
+    "Log": {
+        "Level": "debug",
+        "Output": "/etc/V2bX/V2bX_debug.log"
+    },
+    "Cores": [
+    {
+        "Type": "sing",
+        "Log": {
+            "Level": "error",
+            "Timestamp": true
+        },
+        "NTP": {
+            "Enable": false,
+            "Server": "time.apple.com",
+            "ServerPort": 0
+        },
+        "OriginalPath": "/etc/V2bX/sing_origin.json"
+    }],
+    "Nodes": [{
+            "Core": "sing",
+            "ApiHost": "https://freecn.us.kg",
+            "ApiKey": "Hbv4bEq62rKDjaUphxyx",
+            "NodeID": 1,
+            "NodeType": "vless",
+            "Timeout": 30,
+            "ListenIP": "::",
+            "SendIP": "0.0.0.0",
+            "DeviceOnlineMinTraffic": 1000,
+            "TCPFastOpen": true,
+            "SniffEnabled": true,
+        }, {
+            "Core": "sing",
+            "ApiHost": "https://freecn.us.kg",
+            "ApiKey": "Hbv4bEq62rKDjaUphxyx",
+            "NodeID": 1,
+            "NodeType": "vmess",
+            "Timeout": 30,
+            "ListenIP": "::",
+            "SendIP": "0.0.0.0",
+            "DeviceOnlineMinTraffic": 1000,
+            "TCPFastOpen": true,
+            "SniffEnabled": true,
+            "CertConfig": {
+                "CertMode": "dns",
+                "RejectUnknownSni": false,
+                "CertDomain": "xorvps2.freecn.us.kg",
+                "CertFile": "/etc/V2bX/fullchain.cer",
+                "KeyFile": "/etc/V2bX/cert.key",
+                "Email": "v2bx@github.com",
+                "Provider": "cloudflare",
+                "DNSEnv": {
+                    "EnvName": "env1",
+                    "CLOUDFLARE_EMAIL": "vivianyyy0303@gmail.com",
+                    "CLOUDFLARE_API_KEY": "efdbcb8562592968d2ea9f3e46f0c5051dbc8"
+                }
+            }
+        }, {
+            "Core": "sing",
+            "ApiHost": "https://freecn.us.kg",
+            "ApiKey": "Hbv4bEq62rKDjaUphxyx",
+            "NodeID": 7,
+            "NodeType": "hysteria2",
+            "Timeout": 30,
+            "ListenIP": "::",
+            "SendIP": "0.0.0.0",
+            "DeviceOnlineMinTraffic": 1000,
+            "TCPFastOpen": true,
+            "SniffEnabled": true,
+            "CertConfig": {
+                "CertMode": "dns",
+                "RejectUnknownSni": false,
+                "CertDomain": "xorvps2.freecn.us.kg",
+                "CertFile": "/etc/V2bX/fullchain.cer",
+                "KeyFile": "/etc/V2bX/cert.key",
+                "Email": "v2bx@github.com",
+                "Provider": "cloudflare",
+                "DNSEnv": {
+                    "EnvName": "env1",
+                    "CLOUDFLARE_EMAIL": "vivianyyy0303@gmail.com",
+                    "CLOUDFLARE_API_KEY": "efdbcb8562592968d2ea9f3e46f0c5051dbc8"
+                }
+            }
+        }]
+}
