@@ -19,9 +19,9 @@
     }],
     "Nodes": [{
             "Core": "sing",
-            "ApiHost": xdomain,
-            "ApiKey": xkey,
-            "NodeID": nid1,
+            "ApiHost": "xdomain",
+            "ApiKey": "xkey",
+            "NodeID": "nid1",
             "NodeType": "vless",
             "Timeout": 30,
             "ListenIP": "::",
@@ -31,9 +31,9 @@
             "SniffEnabled": true,
         }, {
             "Core": "sing",
-            "ApiHost": xdomain,
-            "ApiKey": xkey,
-            "NodeID": id2,
+            "ApiHost": "xdomain",
+            "ApiKey": "xkey",
+            "NodeID": "id2",
             "NodeType": "vmess",
             "Timeout": 30,
             "ListenIP": "::",
@@ -44,22 +44,22 @@
             "CertConfig": {
                 "CertMode": "dns",
                 "RejectUnknownSni": false,
-                "CertDomain": xservdomain,
+                "CertDomain": "xservdomain",
                 "CertFile": "/home/username/V2bX/fullchain.cer",
                 "KeyFile": "/home/username/V2bX/cert.key",
                 "Email": "v2bx@github.com",
                 "Provider": "cloudflare",
                 "DNSEnv": {
                     "EnvName": "env1",
-                    "CLOUDFLARE_EMAIL": email_address,
-                    "CLOUDFLARE_API_KEY": api_key
+                    "CLOUDFLARE_EMAIL": "email_address",
+                    "CLOUDFLARE_API_KEY": "api_key"
                 }
             }
         }, {
             "Core": "sing",
-            "ApiHost": xdomain,
-            "ApiKey": xkey,
-            "NodeID": 4,
+            "ApiHost": "xdomain",
+            "ApiKey": "xkey",
+            "NodeID": "id3",
             "NodeType": "hysteria2",
             "Timeout": 30,
             "ListenIP": "::",
@@ -70,15 +70,15 @@
             "CertConfig": {
                 "CertMode": "dns",
                 "RejectUnknownSni": false,
-                "CertDomain": xservdomain,
+                "CertDomain": "xservdomain",
                 "CertFile": "/home/username/V2bX/fullchain.cer",
                 "KeyFile": "/home/username/V2bX/cert.key",
                 "Email": "v2bx@github.com",
                 "Provider": "cloudflare",
                 "DNSEnv": {
                     "EnvName": "env1",
-                    "CLOUDFLARE_EMAIL": email_address,
-                    "CLOUDFLARE_API_KEY": api_key
+                    "CLOUDFLARE_EMAIL": "email_address",
+                    "CLOUDFLARE_API_KEY": "api_key"
                 }
             }
         }]
