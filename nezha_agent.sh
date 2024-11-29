@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # 检查是否提供了参数
-if [ $# -ne 3 ]; then
-    echo "用法: $0 <域名> <端口> <密钥>"
-    exit 1
-fi
+# if [ $# -ne 3 ]; then
+#     echo "用法: $0 <域名> <端口> <密钥>"
+#     exit 1
+# fi
 
 # 获取命令行参数
 nezha_domain=$1
