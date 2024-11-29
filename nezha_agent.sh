@@ -80,7 +80,7 @@ fi
       "nezha_pwd": "$nezha_pwd",
       "tls": "$tls"
     }
-EOF
+    EOF
 
   args="--report-delay 4 --disable-auto-update --disable-force-update "
   if [[ "$tls" == "y" ]]; then
