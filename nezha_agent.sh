@@ -12,21 +12,16 @@ KEY=$3
 
 # 检测系统架构并选择下载链接
 ARCH=$(uname -m)
-case $ARCH in
-    x86_64|amd64)  # 兼容 x86_64 和 amd64
-        AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_amd64.zip"
-        ;;
-    aarch64)
-        AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_arm64.zip"
-        ;;
-    armv7l)
-        AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_arm.zip"
-        ;;
-    *)
-        echo "不支持的系统架构: $ARCH"
-        exit 1
-        ;;
-esac
+if [[ "$ARCH" == "x86_64" || "$ARCH" == "amd64" ]]; then
+    AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_amd64.zip"
+elif [[ "$ARCH" == "aarch64" ]]; then
+    AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_arm64.zip"
+elif [[ "$ARCH" == "armv7l" ]]; then
+    AGENT_URL="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_arm.zip"
+else
+    echo "不支持的系统架构: $ARCH"
+    exit 1
+fi
 
 # 创建安装目录
 INSTALL_DIR=$(pwd)/nezha
