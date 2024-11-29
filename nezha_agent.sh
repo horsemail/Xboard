@@ -99,4 +99,5 @@ EOF
   fi
 
   nohup ./nezha-agent ${args} -s "${nezha_domain}:${nezha_port}" -p "${nezha_pwd}" >/dev/null 2>&1 &
-  green "哪吒探针成功启动!"
+  echo -e "\033[32m哪吒探针成功启动!\033[0m"  # 绿色提示
+  
