@@ -73,7 +73,7 @@ fi
     }
 EOF
 
-  local args="--report-delay 4 --disable-auto-update --disable-force-update "
+  args="--report-delay 4 --disable-auto-update --disable-force-update "
   if [[ "$tls" == "y" ]]; then
      args="${args} --tls "
   fi
