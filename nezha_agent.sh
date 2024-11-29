@@ -86,7 +86,14 @@ EOF
   if [[ "$tls" == "y" ]]; then
      args="${args} --tls "
   fi
+    # 检查探针是否已运行，若运行则停止
+    checknezhaAgentAlive() {
+        pgrep -f "nezha-agent" >/dev/null 2>&1
+    }
 
+    stopNeZhaAgent() {
+        pkill -f "nezha-agent" >/dev/null 2>&1
+    }
   if checknezhaAgentAlive; then
       stopNeZhaAgent
   fi
