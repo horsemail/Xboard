@@ -64,7 +64,7 @@ if [ "$input" == "y" ]; then
     nezha_port=${nezha_port:-5555}
     read -p "请输入服务器密钥(从哪吒面板中获取): " nezha_pwd
     read -p "是否启用 gRPC 端口的 SSL/TLS加密(--tls)，需要请按 [y]，默认不需要: " tls
-    tls=${tls:-"n"}
+    tls=${tls:-"N"}
     generate_config
 fi
 
