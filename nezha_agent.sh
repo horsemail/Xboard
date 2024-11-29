@@ -37,6 +37,15 @@ if [[ ! -e nezha-agent ]]; then
 fi
 
   config="nezha.json"
+  cat > $config <<EOF
+    {
+      "nezha_domain": "$nezha_domain",
+      "nezha_port": "$nezha_port",
+      "nezha_pwd": "$nezha_pwd",
+      "tls": "$tls"
+    }
+    EOF
+
   input="y"
   if [[ -e "$config" ]]; then
     echo "哪吒探针配置如下:"
