@@ -15,12 +15,12 @@
             "Server": "time.apple.com",
             "ServerPort": 0
         },
-        "OriginalPath": "/home/vivianyyy0303/V2bX/sing_origin.json"
+        "OriginalPath": "/home/${username}/V2bX/sing_origin.json"
     }],
     "Nodes": [{
             "Core": "sing",
-            "ApiHost": "https://freecn.us.kg",
-            "ApiKey": "Hbv4bEq62rKDjaUphxyx",
+            "ApiHost": $xdomain,
+            "ApiKey": $xkey,
             "NodeID": 6,
             "NodeType": "vless",
             "Timeout": 30,
@@ -31,8 +31,8 @@
             "SniffEnabled": true,
         }, {
             "Core": "sing",
-            "ApiHost": "https://freecn.us.kg",
-            "ApiKey": "Hbv4bEq62rKDjaUphxyx",
+            "ApiHost": $xdomain,
+            "ApiKey": $xkey,
             "NodeID": 6,
             "NodeType": "vmess",
             "Timeout": 30,
@@ -45,20 +45,20 @@
                 "CertMode": "dns",
                 "RejectUnknownSni": false,
                 "CertDomain": "xserv.freecn.us.kg",
-                "CertFile": "/home/vivianyyy0303/V2bX/fullchain.cer",
-                "KeyFile": "/home/vivianyyy0303/V2bX/cert.key",
+                "CertFile": "/home/${username}/V2bX/fullchain.cer",
+                "KeyFile": "/home/${username}/V2bX/cert.key",
                 "Email": "v2bx@github.com",
                 "Provider": "cloudflare",
                 "DNSEnv": {
                     "EnvName": "env1",
-                    "CLOUDFLARE_EMAIL": "vivianyyy0303@gmail.com",
-                    "CLOUDFLARE_API_KEY": "efdbcb8562592968d2ea9f3e46f0c5051dbc8"
+                    "CLOUDFLARE_EMAIL": ${email_address},
+                    "CLOUDFLARE_API_KEY": ${api_key}
                 }
             }
         }, {
             "Core": "sing",
-            "ApiHost": "https://freecn.us.kg",
-            "ApiKey": "Hbv4bEq62rKDjaUphxyx",
+            "ApiHost": $xdomain,
+            "ApiKey": $xkey,
             "NodeID": 4,
             "NodeType": "hysteria2",
             "Timeout": 30,
@@ -71,14 +71,14 @@
                 "CertMode": "dns",
                 "RejectUnknownSni": false,
                 "CertDomain": "xserv.freecn.us.kg",
-                "CertFile": "/home/vivianyyy0303/V2bX/fullchain.cer",
-                "KeyFile": "/home/vivianyyy0303/V2bX/cert.key",
+                "CertFile": "/home/${username}/V2bX/fullchain.cer",
+                "KeyFile": "/home/${username}/V2bX/cert.key",
                 "Email": "v2bx@github.com",
                 "Provider": "cloudflare",
                 "DNSEnv": {
                     "EnvName": "env1",
-                    "CLOUDFLARE_EMAIL": "vivianyyy0303@gmail.com",
-                    "CLOUDFLARE_API_KEY": "efdbcb8562592968d2ea9f3e46f0c5051dbc8"
+                    "CLOUDFLARE_EMAIL": ${email_address},
+                    "CLOUDFLARE_API_KEY": ${api_key}
                 }
             }
         }]
