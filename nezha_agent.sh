@@ -10,7 +10,7 @@ fi
 nezha_domain=$1
 nezha_port=$2
 nezha_pwd=$3
-tls="false"  # 默认不启用 TLS，如果需要可以手动启用
+tls="N"  # 默认不启用 TLS，如果需要可以手动启用
 
 # 安装路径
 installpath=$(pwd)
