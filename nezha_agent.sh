@@ -25,7 +25,7 @@ cd "${workedir}"
 # 下载哪吒探针
 if [ ! -e nezha-agent ]; then
     echo "正在下载哪吒探针..."
-    url="https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_freebsd_amd64.zip"  # 修改为适合系统架构的 URL
+    url="https://github.com/nezhahq/agent/releases/download/v0.20.5/nezha-agent_freebsd_amd64.zip"  # 修改为适合系统架构的 URL
     agentZip="nezha-agent.zip"
     if ! wget -qO "$agentZip" "$url"; then
         echo -e "\033[31m下载哪吒探针失败\033[0m"  # 红色提示
