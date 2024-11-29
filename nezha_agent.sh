@@ -36,8 +36,8 @@ if [[ ! -e nezha-agent ]]; then
     echo -e "\033[32m下载完毕\033[0m"  # 绿色提示
 fi
 
-  local config="nezha.json"
-  local input="y"
+  config="nezha.json"
+  input="y"
   if [[ -e "$config" ]]; then
     echo "哪吒探针配置如下:"
     cat "$config"
